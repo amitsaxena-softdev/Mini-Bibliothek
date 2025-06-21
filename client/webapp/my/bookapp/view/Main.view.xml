@@ -1,0 +1,14 @@
+<mvc:View
+  controllerName="my.bookapp.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page title="Meine Bücher">
+    <content>
+      <List items="{/books}">
+        <StandardListItem
+          title="{title}"
+          description="{author}" />
+      </List>
+    </content>
+  </Page>
+</mvc:View>

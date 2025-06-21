@@ -1,0 +1,14 @@
+{
+  "name": "book-app-client",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && npm run copy-static",
+    "copy-static": "cp index.html webapp/ && cp manifest.json webapp/ && cp -R src/my/bookapp/view webapp/my/bookapp/",
+    "start": "ui5 serve --open index.html"
+  },
+  "devDependencies": {
+    "@types/openui5": "^1.136.0",
+    "typescript": "^5.8.3"
+  }
+}

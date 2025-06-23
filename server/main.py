@@ -8,6 +8,11 @@ books = [
     Book(id=2, title="Faust", author="Goethe", created_by="Admin", created_at=datetime.now())
 ]
 
+# Create a "/" route that returns a welcome message
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Book API"}
+
 @app.get("/books")
 def get_books():
     return books

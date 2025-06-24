@@ -11,7 +11,7 @@ A simple web application to manage a list of books, built with:
 ---
 
 ## 🚀 Project Structure
-
+```bash
 MINI-BIBLIOTHEK
     │
     │    
@@ -30,12 +30,7 @@ MINI-BIBLIOTHEK
             │
             ├───main.py                # Business logic for each route
             ├───models.py              # Data Models
-
-server/                        # Express backend (JWT Auth + MongoDB)
-├───Controllers/               # Business logic for each route
-├───Routers/                   # Route definitions and endpoints
-├───Models/                    # Mongoose models / schemas
-└───server.js                  # Entry point of the backend app
+```
 ---
 
 ## 💡 Features

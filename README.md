@@ -86,5 +86,6 @@ All requests use JSON payloads.
 **Amit Saxena**
 B.Sc. Computer Science, Saarland University
 
-📧 amitsaxena.softdev@gmail.com
-🔗 LinkedIn | GitHub
+📧 [amitsaxena.softdev@gmail.com](mailto:amitsaxena.softdev@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/amit-saxena-b55345206/) | [GitHub](https://github.com/amitsaxena-softdev/)
+

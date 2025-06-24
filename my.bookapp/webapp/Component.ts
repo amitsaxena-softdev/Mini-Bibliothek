@@ -15,7 +15,7 @@ export default class Component extends UIComponent {
 
 	public init(): void {
 		// call the base component's init function
-		super.init();
+		super.init();		
 
 		// create the device model
 		this.setModel(models.createDeviceModel(), "device");

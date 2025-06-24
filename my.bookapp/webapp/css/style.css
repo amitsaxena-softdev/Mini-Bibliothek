@@ -1,0 +1,17 @@
+.centeredList {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.largeTitle {
+  font-size: 40px;       
+  font-style: italic;
+  color: #0070f2;          
+  text-align: center;
+  font-weight: bold;
+}
+
+.bookList {
+  max-width: 800px;
+  width: 100%;
+}

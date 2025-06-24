@@ -8,23 +8,41 @@
 		formatter: 'my/bookapp/model/formatter'
 	}">
 
-	<Page
-		title="{i18n>appTitle}"
-		id="page">
+	<Page id="page">
+		<customHeader>
+		
+			<Bar>
+			
+				<contentMiddle>
+				<Button text="📚 Neues Buch" press="onAddBook" class="sapUiSmallMarginBottom" />
+				<HBox justifyContent="Center" width="100%">
+					<Text
+					text="{i18n>appTitle}"
+					class="largeTitle" />
+				</HBox>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		
+
 		<content>
-			<IllustratedMessage
-				title="{i18n>appTitle}"
-				illustrationType="sapIllus-SuccessHighFive"
-				enableVerticalResponsiveness="true"
-				description="{i18n>appDescription}">
-				<additionalContent>
-					<Button
-						id="helloButton"
-						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-						press="sayHello" />
-				</additionalContent>
-			</IllustratedMessage>
+			
+  			
+  			<List items="{/books}" class="centeredList">
+				<CustomListItem>
+					<HBox justifyContent="SpaceBetween" width="100%">
+					<VBox>
+						<Text text="{title}" class="sapUiSmallMarginBottom" />
+						<Text text="{author}" />
+						<Text text="von {created_by}" />
+						<Text text="{ path: 'created_at', formatter: 'formatter.formatDate' }" />
+					</VBox>
+					<Button icon="sap-icon://edit" press=".onEditBook" type="Emphasized" />
+					</HBox>
+				</CustomListItem>
+			</List>	
 		</content>
+
 	</Page>
 
 </mvc:View>

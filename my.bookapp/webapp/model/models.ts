@@ -9,5 +9,10 @@ export default {
 		const oModel = new JSONModel(Device);
 		oModel.setDefaultBindingMode(BindingMode.OneWay);
 		return oModel;
+	},
+	createBookModel: () => {
+		const oModel = new JSONModel();
+		oModel.setDefaultBindingMode(BindingMode.TwoWay);
+		return oModel;
 	}
 };

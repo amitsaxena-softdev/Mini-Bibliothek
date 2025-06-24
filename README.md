@@ -2,7 +2,7 @@
 
 A simple web application to manage a list of books, built with:
 
-![Screenshot] (https://github.com/amitsaxena-softdev/Mini-Bibliothek/blob/c687f09cbd0a95b9919c9419358f863f855b7893/public/Screenshot.png)
+![Screenshot](https://github.com/amitsaxena-softdev/Mini-Bibliothek/blob/c687f09cbd0a95b9919c9419358f863f855b7893/public/Screenshot.png)
 
 - **Frontend**: SAPUI5 + TypeScript
 - **Backend**: FastAPI (Python)

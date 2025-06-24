@@ -10,7 +10,6 @@
 
 	<Page id="page">
 		<customHeader>
-		
 			<Bar>
 			
 				<contentMiddle>
@@ -24,10 +23,7 @@
 			</Bar>
 		</customHeader>
 		
-
 		<content>
-			
-  			
   			<List items="{/books}" class="centeredList">
 				<CustomListItem>
 					<HBox justifyContent="SpaceBetween" width="100%">
@@ -37,12 +33,14 @@
 						<Text text="von {created_by}" />
 						<Text text="{ path: 'created_at', formatter: 'formatter.formatDate' }" />
 					</VBox>
-					<Button icon="sap-icon://edit" press=".onEditBook" type="Emphasized" />
+					<VBox>
+						<Button icon="sap-icon://edit" press=".onEditBook" type="Emphasized" />
+						<Button icon="sap-icon://delete" press=".onDeleteBook" type="Negative" tooltip="Buch löschen" />
+					</VBox>
+					
 					</HBox>
 				</CustomListItem>
 			</List>	
 		</content>
-
 	</Page>
-
 </mvc:View>

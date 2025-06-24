@@ -52,3 +52,12 @@ def add_book(book_data: BookCreate):
     books.append(new_book)
     return {"message": "Book added", "book": new_book}
 
+@app.delete("/books/{book_id}")
+def delete_book(book_id: int):
+    global books
+    updated_books = [b for b in books if b.id != book_id]
+    if len(updated_books) == len(books):
+        raise HTTPException(status_code=404, detail="Book not found")
+    books = updated_books
+    return {"message": "Book deleted"}
+

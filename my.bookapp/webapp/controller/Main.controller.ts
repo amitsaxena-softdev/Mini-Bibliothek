@@ -112,4 +112,35 @@ export default class Main extends BaseController {
 
 		oDialog.open();
 	}
+
+	public onDeleteBook(oEvent: any): void {
+  const oBook: Book = oEvent.getSource().getBindingContext().getObject();
+
+  if (!oBook || !oBook.id) {
+    MessageToast.show("Ungültiges Buch");
+    return;
+  }
+
+  MessageBox.confirm(`Buch "${oBook.title}" löschen?`, {
+	onClose: (sAction: string) => {
+	  if (sAction === MessageBox.Action.OK) {
+		fetch(`http://127.0.0.1:8000/books/${oBook.id}`, {
+		  method: "DELETE",
+		})
+		  .then((res) => {
+			if (!res.ok) throw new Error("Fehler beim Löschen");
+			const oModel = this.getView().getModel() as JSONModel;
+			const data = oModel.getData().books as Book[];
+			const updated = data.filter((b) => b.id !== oBook.id);
+			oModel.setData({ books: updated });
+			MessageToast.show("Buch gelöscht");
+		  })
+		  .catch(() => {
+			MessageToast.show("❌ Fehler beim Löschen");
+		  });
+	  }
+	},
+  });
+}
+
 }

@@ -13,20 +13,29 @@ A simple web application to manage a list of books, built with:
 ## 🚀 Project Structure
 
 MINI-BIBLIOTHEK
+    │
+    │    
+    │───my.bookapp/                    # Frontend (SAPUI5 Typescript)
+    │       │
+    │       ├───controller/            # Contains all functionalities
+    │       ├───css/                   # Styling class
+    │       ├───model/                 # Contains models
+    │       ├───view/                  # Contains the XML Data
+    │       ├───Component.ts           # Component to be loaded
+    │       ├───index.html             # HTML File to be rendered
+    │       ├───manifest.json          # Component to be loaded
+    │
+    │
+    └───server/                        # Backend (FastAPI)
+            │
+            ├───main.py                # Business logic for each route
+            ├───models.py              # Data Models
 
-    my.bookapp/                     # Client
-
-        webapp/                     # Contains the app
-            controller/             # Contains all functionalities
-            css/                    # Styling class
-            model/                  # Contains models
-            view/                   # Contains the XML Data
-
-    server/                         # Server
-        main.py                     # Start point of the server
-        models.py                   # Data Models
-
-
+server/                        # Express backend (JWT Auth + MongoDB)
+├───Controllers/               # Business logic for each route
+├───Routers/                   # Route definitions and endpoints
+├───Models/                    # Mongoose models / schemas
+└───server.js                  # Entry point of the backend app
 ---
 
 ## 💡 Features
